@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA App</title>
+    <!-- Favicon -->
+    <link rel="icon" href="R.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Karla;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .markdown {
+            margin-bottom: 20px;
+        }
+        .sidebar {
+            float: center;
+            /* width: 30%; */
+            margin-left: 20px;
+            text-align: center;
+        }
+        .sidebar-checkbox {
+            list-style: none;
+            padding-left: 0;
+        }
+        .sidebar-checkbox label {
+            cursor: pointer;
+        }
+        .sidebar-content {
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>300L Computer Engineering Students Sentiment Analysis App</h1>
+        <img src="sentim.jpg" alt="Sentiment Analysis Image"> <br><br>
+         
+        <div class="markdown">
+            <p>
+                This web app is a sentiment analysis tool developed by Raqibcodes. It has the capability of detecting whether user-entered text has an underlying Positive, Neutral or Negative sentiment. The text classification model was trained on Feedback survey data collected from 300 level Undergraduate Computer Engineering Students at the University of Ilorin (who are Raqib's peers). The model underwent fine-tuning using the BERT model, bert_tiny_en_uncased_sst2 and KerasNLP techniques, resulting in an impressive accuracy score of 96%. The data was subsequently evaluated using a RoBERTa-based model which is a transformer-based model and it also showed strong performances in analyzing sentiments accurately.
+            </p>
+            <p>
+                To utilize this app, simply fill in the prompts in the boxes and then input your text, and it will promptly reveal the underlying sentiment.
+            </p>
+            <p>
+                This web app not only provides sentiment analysis capabilities but also offers an intuitive visualization experience. Users can interact with various charts, including bar charts, pie charts, and word clouds, to gain deeper insights into sentiment trends. The app's interactive features enable users to explore feedback counts based on course difficulty, course code, and gender. Additionally, users can access real-time feedback data, download it for further analysis, and view visualizations that automatically update as new data is generated. This interactive and dynamic approach enhances the user experience, allowing for a more comprehensive understanding of sentiment patterns.
+            </p>
+        </div>
+    </div> <br><br>
+    <div class="sidebar">
+        <h3>Objectives (Aims & Goals of this Project)</h3>
+        <ul class="sidebar-checkbox">
+            <li>
+                <label>
+                    <input type="checkbox" id="show_objectives"> Objectives
+                </label>
+            </li>
+        </ul>
+        <div id="objectives_content" class="sidebar-content" style="display: none; text-align: center;">
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">To uncover sentiments expressed in the feedback and gain a comprehensive understanding of student perceptions, satisfaction, and identifying areas of improvement.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">To ensure real-time analysis to provide immediate insights into prevailing student sentiments.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">Creating interactive visualizations for dynamic displays of sentiment trends over time.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">Extracting insights into teaching methodologies, lecturers, and departmental courses.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">Identifying and highlighting specific challenges faced by students for targeted improvements.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">Facilitating interactive exploration of sentiment analysis results for deeper understanding.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">Establishing a continuous feedback loop for ongoing improvement in educational practices.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">Enabling lecturers to download sentiment analysis data for in-depth analysis.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">Ensuring privacy and ethical handling of student feedback data in compliance with regulations.</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="objective" style="display: inline-block;">Aiding the lecturers in interpreting and utilizing sentiment analysis results.</span>
+            </div>
+        </div>
+        
+        <style>
+            .objective {
+                display: inline-block;
+                background-color: #f0f0f0;
+                padding: 10px 20px;
+                border-radius: 25px;
+                transition: all 0.3s ease;
+            }
+            .objective:hover {
+                background-color: #33C481;
+                color: #fff;
+            }
+        </style>
+
+
+
+        <h3>App Features</h3>
+        <ul class="sidebar-checkbox">
+            <li>
+                <label>
+                    <input type="checkbox" id="show_app_features"> Show App Features
+                </label>
+            </li>
+        </ul>
+        <div id="app_features_content" class="sidebar-content" style="display: none; text-align: center;">
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">Sentiment Analysis Functionality</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">User Input Collection</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">Text Preprocessing</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">Percentage Confidence</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">Interactive Visualization</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">Summary Statistics</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">Interactive Exploration</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">Real-Time Feedback Data Access</span>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <span class="feature" style="display: inline-block;">Automatic Real-Time Saving</span>
+            </div>
+        </div>
+        
+        <style>
+            .feature {
+                display: inline-block;
+                background-color: #f0f0f0;
+                padding: 5px 10px;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+            }
+            .feature:hover {
+                background-color: #33C481;
+                color: #fff;
+            }
+        </style>
+        
+    </div>
+
+
+    <div id="selection-container" style="display: none;">
+        <div class="dropdown">
+            <label for="course_code">Course Code:</label>
+            <select id="course_code">
+                <option value="">Select Course Code</option>
+                <option value="CPE 321">CPE 321</option>
+                <option value="CPE 311">CPE 311</option>
+                <option value="CPE 341">CPE 341</option>
+                <option value="CPE 381">CPE 381</option>
+                <option value="CPE 331">CPE 331</option>
+                <option value="MEE 361">MEE 361</option>
+                <option value="GSE 301">GSE 301</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="previous_exp">Previous Experience:</label>
+            <select id="previous_exp">
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="gender">Gender:</label>
+            <select id="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="attendance">Attendance:</label>
+            <select id="attendance">
+                <option value="">Select Attendance</option>
+                <option value="Regular">Regular</option>
+                <option value="Irregular">Irregular</option>
+                <option value="Occasional">Occasional</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="difficulty">Course Difficulty:</label>
+            <select id="difficulty">
+                <option value="">Select Difficulty</option>
+                <option value="Easy">Easy</option>
+                <option value="Difficult">Difficult</option>
+                <option value="Challenging">Challenging</option>
+                <option value="Moderate">Moderate</option>
+            </select>
+        </div>
+
+        <div class="input-container">
+            <label for="study_hours">Study Hours (per week):</label>
+            <input type="range" id="study_hours" name="study_hours" min="0" max="24" value="0">
+            <output id="study_hours_value">0</output> hours
+        </div>
+
+        <div class="input-container">
+            <label for="satisfaction">Overall Satisfaction:</label>
+            <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="1">
+            <output id="satisfaction_value">1</output>
+        </div>
+
+        
+        <div class="dropdown">
+            <label for="department">Department:</label>
+            <select id="department">
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+
+    </div>
+    <button id="show-selection-btn" onclick="toggleSelection()">Toggle Selection of Details</button> <br><br>
+    <script>
+        document.getElementById("show_objectives").addEventListener("change", function() {
+            var objectivesContent = document.getElementById("objectives_content");
+            objectivesContent.style.display = this.checked ? "block" : "none";
+        });
+        document.getElementById("show_app_features").addEventListener("change", function() {
+            var appFeaturesContent = document.getElementById("app_features_content");
+            appFeaturesContent.style.display = this.checked ? "block" : "none";
+        });
+    </script>
+
+<!-- <div id="analyze_button_div">
+    <textarea id="user_input" placeholder="Enter Your Text Feedback Here:"></textarea><br>
+    <button id="analyze_button">Analyze Sentiment</button>
+    <div id="result_container"></div>
+</div> -->
+
+    <div class="container">
+        <h1>Sentiment Analysis</h1>
+        <form action="/" method="post">
+            <textarea name="user_input" placeholder="Enter your text feedback here..."></textarea><br>
+            <label for="course_code">Course Code:</label>
+            <select name="course_code" id="course_code">
+                <option value="">Select Course Code</option>
+                <option value="CPE 321">CPE 321</option>
+                <option value="CPE 311">CPE 311</option>
+                <option value="CPE 341">CPE 341</option>
+                <option value="CPE 381">CPE 381</option>
+                <option value="CPE 331">CPE 331</option>
+                <option value="MEE 361">MEE 361</option>
+                <option value="GSE 301">GSE 301</option>
+            </select><br><br>
+
+            <label for="previous_exp">Previous Experience:</label>
+            <select name="previous_exp" id="previous_exp">
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+
+            <label for="gender">Gender:</label>
+            <select name="gender" id="gender">
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br><br>
+
+            <label for="attendance">Attendance:</label>
+            <select name="attendance" id="attendance">
+                <option value="">Select Attendance</option>
+                <option value="Regular">Regular</option>
+                <option value="Irregular">Irregular</option>
+                <option value="Occasional">Occasional</option>
+            </select><br><br>
+
+            <label for="difficulty">Course Difficulty:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="">Select Difficulty</option>
+                <option value="Easy">Easy</option>
+                <option value="Difficult">Difficult</option>
+                <option value="Challenging">Challenging</option>
+                <option value="Moderate">Moderate</option>
+            </select><br><br>
+
+            <!-- <label for="study_hours_range">Weekly Study Hours (0 - 24):</label>
+            <input type="range" id="study_hours_range" name="study_hours_range" min="0" max="24" value="0" onchange="updateStudyHours()">
+            <output id="study_hours_value">0</output> hours<br><br>
+            <script>
+                function updateStudyHours() {
+                    var range = document.getElementById("study_hours_range");
+                    var output = document.getElementById("study_hours_value");
+                    output.value = range.value;
+                }
+            </script> -->
+
+            <label for="study_hours">Weekly Study Hours:</label>
+            <select id="study_hours" name="study_hours">
+                <option value="">Select Option</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+            </select><br><br>
+
+            <label for="satisfaction">Overall Satisfaction:</label>
+            <select id="satisfaction" name="satisfaction">
+                <option value="">Select Satisfaction Level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br><br>
+
+            <label for="department">Department:</label>
+            <select name="department" id="department">
+                <option value="">Select Option</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select><br><br>
+
+
+            <button type="submit">Analyze Sentiment</button>
+        </form><br>
+        {% if sentiment %}
+        <div class="result">
+            <h2>Sentiment Analysis Result:</h2>
+            <p><strong>Predicted Label:</strong> {{ sentiment.predicted_label }}</p>
+            <p><strong>Confidence Percentage:</strong> {{ sentiment.confidence_percentage }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
