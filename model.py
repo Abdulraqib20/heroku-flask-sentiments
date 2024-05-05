@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 import plotly.express as px
-import altair as alt
+# import altair as alt
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 from PIL import Image
 import collections
