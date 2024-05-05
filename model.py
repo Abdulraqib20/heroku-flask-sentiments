@@ -91,12 +91,9 @@ def preprocess_text(text):
 X_preprocessed = [preprocess_text(text) for text in df['feedback']]
 
 # model name
-model_name = 'cardiffnlp/twitter-roberta-base-sentiment-latest'
-# load directory of saved model
-save_directory = r"C:\Users\user\Desktop\MACHINE LEARNING\Sentiment Analysis\New folder"
-# load model from the local directory
-tokenizer = AutoTokenizer.from_pretrained(save_directory)
-model = AutoModelForSequenceClassification.from_pretrained(save_directory)
+MODEL = f"cardiffnlp/twitter-roberta-base-sentiment-latest"
+tokenizer = AutoTokenizer.from_pretrained(MODEL)
+model = AutoModelForSequenceClassification.from_pretrained(MODEL)
 
 # calculate sentiment scoring
 def sentiment_score(text, model, tokenizer, label_mapping={1: 'Negative', 2: 'Neutral', 3: 'Positive'}):
