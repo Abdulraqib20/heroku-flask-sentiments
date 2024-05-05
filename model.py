@@ -18,10 +18,10 @@ from torch.nn.functional import softmax
 import torch
 
 import nltk
-# nltk.download('punkt')
-# nltk.download('stopwords')
-# nltk.download('wordnet')
-# nltk.download('omw-1.4')
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('omw-1.4')
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
